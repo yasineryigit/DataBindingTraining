@@ -6,6 +6,9 @@
         <variable
             name="student"
             type="com.ossovita.databindingtraining.Student" />
+        <variable
+            name="clickHandler"
+            type="com.ossovita.databindingtraining.MainActivity.MainActivityClickHandler" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -40,6 +43,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.432"
          />
+
+    <Button
+        android:id="@+id/enrollButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enroll"
+        android:onClick="@{()->clickHandler.onEnrollButtonClicked()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:onClick="@{()->clickHandler.onCancelButtonClicked()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
